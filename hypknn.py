@@ -116,7 +116,6 @@ class HyperbolicKNN:
         int: O rótulo previsto para o ponto de dados de entrada x.
         """
         # Calcula as distâncias hiperbólicas para todos os pontos de dados de treinamento
-        # A função `hypdist` DEVE ser uma implementação correta da distância no modelo de Poincaré.
         distances = [hypdist(x, x_train_point, c=self.c) for x_train_point in self.X_train]
 
         # Obtém os índices dos k pontos de dados de treinamento mais próximos
